@@ -1,0 +1,247 @@
+/* ============================================
+   VARIABLES DEL MODO OSCURO
+   ============================================ */
+
+body.dark-mode {
+  /* Colores principales - Mantiene la paleta púrpura/violeta del modo claro */
+  --bg-primary: #0d0d1f;
+  --bg-secondary: #1a1a2e;
+  --bg-card: #252538;
+  --text-primary: #e8e8f0;
+  --text-secondary: #a8a8b8;
+  --border-color: #3d3d5c;
+
+  /* Gradientes - Versión oscura del gradiente principal (#667eea → #764ba2) */
+  --gradient-primary: linear-gradient(135deg, #1a1a2e 0%, #2d2640 50%, #1f1f35 100%);
+  --gradient-card: linear-gradient(135deg, #2d2640 0%, #3d3558 100%);
+  --gradient-header: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+  /* Sombras - Más sutiles para modo oscuro */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.6);
+
+  /* Acentos - Mantiene el amarillo Pokémon */
+  --accent-yellow: #ffcb05;
+  --accent-purple: #8b7fd9;
+}
+
+/* ============================================
+   APLICAR ESTILOS AL BODY
+   ============================================ */
+
+body.dark-mode {
+  background: var(--gradient-primary);
+  color: var(--text-primary);
+}
+
+/* ============================================
+   APP CONTAINER
+   ============================================ */
+
+body.dark-mode .app {
+  background: var(--gradient-primary);
+}
+
+body.dark-mode .app::before {
+  background: radial-gradient(circle, rgba(102, 126, 234, 0.08) 0%, transparent 70%);
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+
+body.dark-mode .app-header {
+  background: rgba(26, 26, 46, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom-color: var(--accent-yellow);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .app-title {
+  background: linear-gradient(135deg, #8b7fd9 0%, #b89ef7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+body.dark-mode .app-subtitle {
+  color: var(--text-secondary);
+}
+
+/* ============================================
+   SEARCH BAR
+   ============================================ */
+
+body.dark-mode .search-input {
+  background: var(--bg-card);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .search-input::placeholder {
+  color: #6e6e8a;
+}
+
+body.dark-mode .search-input:focus {
+  border-color: var(--accent-purple);
+  box-shadow: 0 12px 48px rgba(139, 127, 217, 0.3);
+}
+
+body.dark-mode .suggestions-list {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .suggestion-item {
+  color: var(--text-primary);
+}
+
+body.dark-mode .suggestion-item:hover {
+  background: var(--gradient-card);
+  border-color: var(--accent-purple);
+}
+
+body.dark-mode .suggestion-name {
+  color: var(--text-primary);
+}
+
+body.dark-mode .suggestion-number {
+  color: var(--text-secondary);
+}
+
+body.dark-mode .no-results {
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.4);
+}
+
+/* ============================================
+   POKEMON PROFILE
+   ============================================ */
+
+body.dark-mode .pokemon-profile {
+  background: rgba(26, 26, 46, 0.98);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .empty-state {
+  background: rgba(26, 26, 46, 0.95);
+}
+
+body.dark-mode .empty-state h2 {
+  background: linear-gradient(135deg, #8b7fd9 0%, #b89ef7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+body.dark-mode .empty-state p {
+  color: var(--text-secondary);
+}
+
+body.dark-mode .pokemon-header {
+  background: var(--gradient-card);
+  border-bottom: 2px solid var(--border-color);
+}
+
+body.dark-mode .pokemon-name {
+  color: var(--text-primary);
+  text-shadow: 2px 2px 8px rgba(139, 127, 217, 0.3);
+}
+
+body.dark-mode .pokemon-number {
+  color: var(--text-secondary);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .section-title {
+  color: var(--text-primary);
+  border-left: 4px solid var(--accent-purple);
+}
+
+body.dark-mode .effectiveness-section {
+  background: var(--gradient-card);
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+}
+
+body.dark-mode .effectiveness-group {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .effectiveness-description {
+  color: var(--text-secondary);
+}
+
+body.dark-mode .no-types {
+  color: #6e6e8a;
+}
+
+body.dark-mode .physical-info {
+  background: var(--gradient-card);
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+}
+
+body.dark-mode .info-label {
+  color: var(--text-secondary);
+}
+
+body.dark-mode .info-value {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+body.dark-mode .app-footer {
+  background: rgba(26, 26, 46, 0.95);
+  backdrop-filter: blur(12px);
+  border-top-color: var(--accent-yellow);
+  color: var(--text-secondary);
+  box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .app-footer a {
+  color: var(--accent-purple);
+}
+
+body.dark-mode .app-footer a:hover {
+  color: #b89ef7;
+}
+
+body.dark-mode .footer-note {
+  color: #6e6e8a;
+}
+
+/* ============================================
+   SCROLLBAR EN MODO OSCURO
+   ============================================ */
+
+body.dark-mode ::-webkit-scrollbar {
+  width: 10px;
+}
+
+body.dark-mode ::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #8b7fd9 0%, #6a5bb3 100%);
+  border-radius: 5px;
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #b89ef7 0%, #8b7fd9 100%);
+}

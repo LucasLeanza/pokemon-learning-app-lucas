@@ -2,6 +2,7 @@ import { useState } from "react";
 import SearchBar from './components/SearchBar'
 import PokemonProfile from './components/PokemonProfile'
 import './App.css'
+import ThemeToggle from "./components/ThemeToggle";
 
 /**
  * Componente principal de la aplicación
@@ -40,6 +41,9 @@ function App() {
 
   return (
     <div className="app">
+      {/*BOTON DE TEMA*/}
+      <ThemeToggle />
+
       {/*HEADER*/}
       <header className="app-header">
         <div className="header-content">

@@ -142,18 +142,15 @@ HEADER
   height: 60px;
   width: 60px;
   filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
-  animation: bounce 2s ease-in-out infinite;
+  animation: float-smooth 4s ease-in-out infinite;
 }
 
-@keyframes bounce {
+@keyframes float-smooth {
   0%, 100% {
     transform: translateY(0) rotate(0deg);
   }
-  25% {
-    transform: translateY(-10px) rotate(-5deg);
-  }
-  75% {
-    transform: translateY(-5px) rotate(5deg);
+  50% {
+    transform: translateY(-8px) rotate(3deg);
   }
 }
 
