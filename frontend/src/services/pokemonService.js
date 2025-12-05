@@ -1,12 +1,24 @@
 import axios from 'axios'
 
-const api = axios.create({
-  baseURL: '/api',
-  timeout: 5000,
-  headers: {
-    'Content-Type' : 'application/json'
-  }
-})
+// const api = axios.create({
+//   baseURL: '/api',
+//   timeout: 5000,
+//   headers: {
+//     'Content-Type' : 'application/json'
+//   }
+// })
+
+const baseURL = import.meta.env.PROD
+  ? 'https://pokemon-learning-app.onrender.com'
+  : '/api'
+
+  const api = axios.create({
+    baseURL: baseURL,
+    timeout: 10000,
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  })
 
 // ============================================
 // INTERCEPTORES (PARA DEBUGGING)
