@@ -10,7 +10,7 @@ const { calculateTypeRelations } = require('../utils/typeEffectiveness')
 // ============================================
 
 const POKEAPI_BASE = 'https://pokeapi.co/api/v2'
-const TOTAL_POKEMON = 905; //Total en todas las generaciones: 905
+const TOTAL_POKEMON = 1025; //Total en todas las generaciones: 1025
 
 // ============================================
 // FUNCIÓN: CONECTAR A MONGODB
